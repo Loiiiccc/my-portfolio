@@ -7,6 +7,7 @@ import ProjectSection from "@/components/ProjectSection";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import FeaturedProjects from "@/components/FeaturedProjects";
+import ProjectModal from "@/components/ProjectModal";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         
       <Navbar />
       <HeroSection />
-      <FeaturedProjects />
+      <ProjectSection />
     </div>
   );
   {

@@ -30,7 +30,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden  md:flex space-x-6 ">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -41,14 +41,14 @@ export default function Navbar() {
                 <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-current scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </Link>
             ))}
-          </div>
 
             {/* Theme Toggle */}
           <ThemeToggle />
+          </div>
           {/* Mobile Menu Button */}
           <Button
             variant="default"
-            className="md:hidden"
+            className="md:hidden rounded-full "
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -81,6 +81,10 @@ export default function Navbar() {
               </Link>
               </motion.div>
             ))}
+            
+
+            {/* Theme Toggle */}
+          <ThemeToggle />
           </div>
         </motion.div>
       )}

@@ -10,17 +10,17 @@ export default function HeroSection(){
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="top-0 left-0 px-16 pt-24 w-full h-screen "
-        // className=" flex flex-col justify-center items-center text-center min-h-screen px-6"
+        className="container border-2 rounded-xl mt-20 mx-auto p-8  bg-white dark:bg-gray-900"
+        
       >
         
-        <h1 className="text-4xl sm:text-6xl font-extrabold text-gray-900 dark:text-white">
+        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white tracking-light">
           Hi, I'm{" "}
           <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600  bg-clip-text text-transparent">
             Loic Ayassou
           </span>
         </h1>
-        <p className="mt-4 text-lg sm:text-xl text-gray-600 dark:text-gray-300 ">
+        <p className="mt-4 text-lg  text-gray-600 text-wrap dark:text-gray-300 ">
           I'm a software engineer with 5 years of experience in web development.
           I have a strong background in web development and have worked with
           various technologies and frameworks.
@@ -31,7 +31,7 @@ export default function HeroSection(){
           <button className="px-8 py-3 rounded-full border-2 border-primary bg-primary text-white font-bold hover:bg-primary-800">
             About Me
           </button>
-          <button className="px-8 py-3 rounded-full border-2 border-solid hover:border-primary text-white hover:text-primary font-bold cursor-pointer">
+          <button className="px-8 py-3 rounded-full border-2 border-solid border-gray-900 hover:border-primary  hover:text-primary font-bold  text-gray-900 dark:text-white cursor-pointer">
             Contact Me
           </button>
         </div>

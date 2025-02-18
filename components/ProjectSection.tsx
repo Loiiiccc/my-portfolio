@@ -74,22 +74,22 @@ const ProjectSection = () => {
 
 
   return (
-    <section id="projects" className="px-4 py-32 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-bold text-white mb-12 text-center">
+    <section id="projects" className=" border-2 rounded-2xl px-8 py-12 mx-12 my-8 sm:mx-18 sm:my-12 lg:mx-24 lg:my-16 bg-white dark:bg-gray-900">
+      <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
         Featured Projects
       </h2>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <div className=" grid grid-cols-1 gap-4 sm:grid-cols-3">
         {projects.map((project, index) => (
           <button onClick={() => handleProjectClick(project.id)  }
             key={index}
-            className="bg-gray-700/30 backdrop-blur-sm rounded-xl p-6 border border-gray-600 hover:border-primary-500 transition-colors hover:shadow-sm text-left"
+            className=" group bg-gray-700/30 backdrop-blur-sm rounded-xl p-6 border border-gray-600 hover:border-primary-500 transition-colors hover:shadow-sm text-left"
           >
             <div className="flex flex-col h-full">
-              <h3 className=" text-lg font-semibold text-white mb-2">{project.title}</h3>
+              <h3 className=" text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-primary-500">{project.title}</h3>
               <div className="flex flex-wrap gap-1 mt-auto">
                 {
                   project.tags.map((tag, index) => (
-                    <span key={index} className="px-2 py-0.5 rounded-full bg-primary-500/20 text-primary-200 border border-primary-500/30">
+                    <span key={index} className="px-2 py-0.5 rounded-full bg-primary-500/20 text-primary-900 border border-primary-500/30 dark:border-primary-500/30 dark:text-primary-200">
 {tag}
                     </span>
                   ))
