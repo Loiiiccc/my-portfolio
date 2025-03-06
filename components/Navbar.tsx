@@ -21,7 +21,7 @@ export default function Navbar() {
     
     <motion.nav initial={{ opacity: 0, y: -20 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }} className="bg-white dark:bg-gray-900 shadow-md fixed top-0 left-0 w-full z-50">
+    transition={{ duration: 0.5 }} className="bg-white dark:bg-[#000] shadow-md fixed top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
@@ -62,7 +62,7 @@ export default function Navbar() {
         <motion.div initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
-        transition={{ duration: 0.3 }} className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+        transition={{ duration: 0.3 }} className="md:hidden bg-white dark:bg-[#000] border-t border-gray-200 dark:border-gray-700">
           <div className="px-4 py-3 space-y-2">
             {navLinks.map((link,index) => (
               <motion.div

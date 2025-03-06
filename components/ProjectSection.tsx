@@ -1,7 +1,8 @@
 "use client"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProjectModal from "./ProjectModal";
 import Project from "../app/models/project";
+import gsap from 'gsap';
 const ProjectSection = () => {
   
   const projects : Project[] = [
@@ -72,9 +73,14 @@ const ProjectSection = () => {
     setSelectedProject(projects[previousIndex].id);
   }
 
+  useEffect(() => {
+    gsap.from('.project-item', { opacity: 0, y: 50, stagger: 0.2 });
+  }, []);
+
 
   return (
-    <section id="projects" className=" border-2 rounded-2xl px-8 py-12 mx-12 my-8 sm:mx-18 sm:my-12 lg:mx-24 lg:my-16 bg-white dark:bg-gray-900">
+    <section id="projects"  className="w-full min-h-screen flex flex-col justify-center items-center text-center px-6  bg-white dark:bg-gray-900">
+
       <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
         Featured Projects
       </h2>
@@ -82,11 +88,11 @@ const ProjectSection = () => {
         {projects.map((project, index) => (
           <button onClick={() => handleProjectClick(project.id)  }
             key={index}
-            className=" group bg-gray-700/30 backdrop-blur-sm rounded-xl p-6 border border-gray-600 hover:border-primary-500 transition-colors hover:shadow-sm text-left"
+            className=" hover:scale-105  group bg-gray-700/30 backdrop-blur-sm rounded-xl p-6 border border-gray-600 hover:border-primary-500 transition-colors hover:shadow-sm text-left"
           >
-            <div className="flex flex-col h-full">
+            <div className=" flex flex-col h-full">
               <h3 className=" text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-primary-500">{project.title}</h3>
-              <div className="flex flex-wrap gap-1 mt-auto">
+              <div className=" flex flex-wrap gap-1 mt-auto ">
                 {
                   project.tags.map((tag, index) => (
                     <span key={index} className="px-2 py-0.5 rounded-full bg-primary-500/20 text-primary-900 border border-primary-500/30 dark:border-primary-500/30 dark:text-primary-200">

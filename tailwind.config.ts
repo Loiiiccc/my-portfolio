@@ -11,6 +11,21 @@ export default {
   ],
   theme: {
   	extend: {
+		'animation': {
+            'text':'text 7s ease infinite',
+        },
+        'keyframes': {
+            'text': {
+                '0%, 100%': {
+                   'background-size':'200% 200%',
+                    'background-position': 'left center'
+                },
+                '50%': {
+                   'background-size':'200% 200%',
+                    'background-position': 'right center'
+                }
+            },
+        },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

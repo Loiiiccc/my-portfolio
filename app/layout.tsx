@@ -25,9 +25,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth font-family-[var(--font-morigothic-sans-serif)]">
       <body
-        className="bg-gray-900  text-slate-50"
+        className="bg-white dark:bg-[#000] "
       >
        <ThemeProvider>{children}</ThemeProvider>
       </body>
