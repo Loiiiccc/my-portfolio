@@ -44,7 +44,7 @@ export const TechsData = [
     LanguagesTechs: [
       {
         name: "ASP.NET Core",
-        logo: "/logos/ASP.NET.svg",
+        logo: "/logos/dot-net-core.svg",
         description:
           "ASP.NET Core is a cross-platform, open-source framework for building web applications and APIs. It is used for developing web applications, web services, and APIs using C# and.NET.",
       },
@@ -146,7 +146,7 @@ export const TechsData = [
       },
       {
         name: "MongoDB",
-        logo: "/logos/MongoDB.svg",
+        logo: "/logos/mongodb-icon-1.svg",
         description:
           "MongoDB is a document database that stores data in JSON-like documents with support for indexing, full-text search, and replication.",
       },

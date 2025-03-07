@@ -15,8 +15,7 @@ export default function TechnologySection() {
           I have experience working with a range of technologies, including:
         </p>
         <div className="mt-20 md:mt-[50vh] mb-20 md:mb-[100vh] relative">
-          
-            <TechnologyCard/>
+          <TechnologySvg />
         </div>
       </div>
     </section>
